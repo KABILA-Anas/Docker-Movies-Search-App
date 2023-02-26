@@ -90,7 +90,7 @@
           $("#posters").append(movieCard);
 
           document.getElementById(movie.imdbID).addEventListener("click", function() {
-            const data = { Title: movie.Title, Year: movie.Year };
+            const data = { _id: movie.imdbID, Title: movie.Title, Year: movie.Year };
 
             fetch('/saveMovie', {
               method: 'POST',
