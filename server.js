@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended:true}));
 
 
-
+//insert a movies in the database
 app.post('/saveMovie', async (req, res) => {
   const client = await MongoClient.connect(db_url);
   console.log("Connecté à la base de données 'MyDB'");
