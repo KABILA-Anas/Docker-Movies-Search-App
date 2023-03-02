@@ -75,6 +75,9 @@
           //appending the created card to the UI (div)
           $("#posters").append(movieCard);
 
+
+          /**adding click event to insert the movie in the database,
+          this function send a request to the server, the request contain the movies informations**/
           document.getElementById(movie.imdbID).addEventListener("click", function() {
             const data = { _id: movie.imdbID, Title: movie.Title, Year: movie.Year };
 
